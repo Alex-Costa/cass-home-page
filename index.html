@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASS Sistemas - Soluções para Gestão Pública</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+        }
+
+        /* Cabeçalho moderno */
+        header {
+            background: linear-gradient(135deg, #0078D7, #005A9E);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            width: 450px;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* Navegação moderna */
+        nav {
+            background: #005A9E;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffdd57;
+        }
+
+        /* Seções modernas */
+        section {
+            padding: 40px 20px;
+            margin: 20px 0;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #0078D7;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #0078D7;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #005A9E;
+        }
+
+        /* Layout moderno para funcionalidades, benefícios e secretarias */
+        .features, .benefits, .departments {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .feature, .benefit, .department {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature:hover, .benefit:hover, .department:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature img, .benefit img, .department img {
+            width: 10%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Rodapé moderno */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Formulário moderno */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form label {
+            font-weight: bold;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button {
+            background: #0078D7;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        form button:hover {
+            background: #005A9E;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .features, .benefits, .departments {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho moderno com logotipo -->
+    <header>
+        <img src="img/logo-cass-sistemas.png" alt="Logotipo CASS Sistemas">
+        <p>Soluções Tecnológicas para Gestão Pública</p>
+    </header>
+
+    <!-- Navegação -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#solucao">Solução</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#secretarias">Secretarias Atendidas</a>
+    </nav>
+
+    <!-- Seção Home -->
+    <section align="center" id="home">
+        <h2>Bem-vindo à CASS Sistemas</h2>
+        <p">Transformando a gestão municipal com inovação e eficiência.</p>
+        <a href="#solucao" class="cta-button">Conheça Nossa Solução</a>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section align="center" id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>A CASS Sistemas é uma empresa inovadora focada no desenvolvimento e fornecimento de soluções tecnológicas para a gestão pública.<br/> Nosso compromisso é transformar a relação entre a administração municipal e os cidadãos, oferecendo ferramentas modernas e eficientes que facilitam o acesso aos serviços públicos e aprimoram a eficiência governamental.</p>
+    </section>
+
+    <!-- Seção Solução -->
+    <section align="center" id="solucao">
+        <h2>Nossa Solução</h2>
+        <p>Nossa plataforma de Gestão Pública Participativa (GPP) é uma solução completa baseada em Software como Serviço (SaaS), projetada para atender às necessidades de virtualização documental, georreferenciamento de imóveis e ruas, cadastro de munícipes e facilitação do acesso aos serviços públicos. <br/> Confira abaixo as principais funcionalidades:</p></p>
+        <div class="features">
+            <div class="feature">
+                <img src="img/pasta-de-arquivo.png" alt="Gestão Eletrônica de Documentos">
+                <h3>Gestão Eletrônica de Documentos</h3>
+                <p>Digitalização e trâmite eletrônico de documentos, despachos e anexos, eliminando a necessidade de papel e agilizando processos.</p>
+            </div>
+            <div class="feature">
+                <img src="img/localizacao.png" alt="Georreferenciamento">
+                <h3>Georreferenciamento</h3>
+                <p>Mapeamento de ruas e imóveis com identificação de riscos e classificação de imóveis (residencial, comercial, educacional, hospitalar, etc.).</p>
+            </div>
+            <div class="feature">
+                <img src="img/identidade-digital.png" alt="Cadastro de Munícipes">
+                <h3>Cadastro de Munícipes</h3>
+                <p>Cadastro completo de munícipes com foto, reconhecimento facial e vinculação a imóveis, garantindo maior controle e segurança.</p>
+            </div>
+        </div>
+        <a href="#rodape" class="cta-button">Solicite uma Demonstração</a>
+    </section>
+
+    <!-- Seção Benefícios -->
+    <section align="center" id="beneficios">
+        <h2>Benefícios</h2>
+        <p>Nossa solução traz inúmeros benefícios para os municípios e seus cidadãos:</p>
+        <div class="benefits">
+            <div class="benefit">
+                <img src="img/eficiencia.png" alt="Eficiência Operacional">
+                <h3>Eficiência Operacional</h3>
+                <p>Redução de custos e tempo com processos digitais e automatizados.</p>
+            </div>
+            <div class="benefit">
+                <img src="img/transparencia.png" alt="Transparência">
+                <h3>Transparência</h3>
+                <p>Maior visibilidade dos processos e serviços para os cidadãos.</p>
+            </div>
+            <div class="benefit">
+                <img src="img/dados-seguros.png" alt="Conformidade com a LGPD">
+                <h3>Conformidade com a LGPD</h3>
+                <p>Garantia de segurança e privacidade dos dados dos cidadãos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Secretarias Atendidas -->
+    <section align="center" id="secretarias">
+        <h2>Secretarias Atendidas</h2>
+        <p>Nossa solução atende a todas as secretarias municipais, proporcionando integração e eficiência. <br/>Confira abaixo:</p>
+        <div class="departments">
+            <div class="department">
+				<img src="img/administracao.png" alt="Administração">
+                <h3>Administração</h3>
+                <p>Gestão eficiente de documentos e processos internos.</p>
+            </div>
+            <div class="department">
+				<img src="img/responsabilidade-social.png" alt="Assistência Social">
+                <h3>Assistência Social</h3>
+                <p>Facilitação de solicitações e acompanhamento de serviços sociais.</p>
+            </div>
+            <div class="department">
+				<img src="img/medico.png" alt="Saúde">
+                <h3>Saúde</h3>
+                <p>Agendamento de consultas, prontuários eletrônicos e receituário digital.</p>
+            </div>
+            <div class="department">
+				<img src="img/educacao.png" alt="Educação">
+                <h3>Educação</h3>
+                <p>Matrículas escolares, cadastro de instituições de ensino e alocação de alunos.</p>
+            </div>
+            <div class="department">
+				<img src="img/obras.png" alt="Obras e Infraestrutura">
+                <h3>Obras e Infraestrutura</h3>
+                <p>Solicitação e acompanhamento de reparos e melhorias urbanas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+	<section id="rodape">
+		<footer>
+			<p>&copy; 2022 CASS Sistemas. Todos os direitos reservados.</p>
+			<p>Contato: sac@casssistemas.com.br | (79) 98812-0581</p>
+		</footer>
+	</section>
+</body>
+</html>
