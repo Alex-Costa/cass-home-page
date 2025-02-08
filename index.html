@@ -20,10 +20,12 @@
         }
 
         /* Cabeçalho moderno */
+	    div.cabecalho-fixo {
+		position: sticky;
+		top: 0;
+		z-index: 101;
+	    }
         header {
-	    position: sticky;
-	    top: 0;
-	    z-index: 101;
             background: linear-gradient(135deg, #0078D7, #005A9E);
             color: #fff;
             text-align: center;
@@ -182,7 +184,8 @@
 </head>
 <body>
     <!-- Cabeçalho moderno com logotipo -->
-    <header>
+    <div class="cabecalho-fixo">
+	<header>
         <img src="img/logo-cass-sistemas.png" alt="Logotipo CASS Sistemas">
         <p>Soluções Tecnológicas para Gestão Pública</p>
     </header>
@@ -195,6 +198,7 @@
         <a href="#beneficios">Benefícios</a>
         <a href="#secretarias">Secretarias Atendidas</a>
     </nav>
+    </div>
 
     <!-- Seção Home -->
     <section align="center" id="home">
