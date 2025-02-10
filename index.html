@@ -20,21 +20,18 @@
         }
 
         /* Cabeçalho moderno */
-	    div.cabecalho-fixo {
-		position: sticky;
-		top: 0;
-		z-index: 101;
-	    }
         header {
             background: linear-gradient(135deg, #0078D7, #005A9E);
             color: #fff;
+            padding: 20px 0;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         header img {
-            max-width: 450px;
+            max-width: 600px;
 	    width: 100%;
+            margin-bottom: 10px;
         }
 
         header h1 {
@@ -98,13 +95,13 @@
         }
 
         /* Layout moderno para funcionalidades, benefícios e secretarias */
-        .features, .benefits, .departments {
+        .features, .benefits, .departments, .solutions {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
 
-        .feature, .benefit, .department {
+        .feature, .benefit, .department, .solution {
             background: #f4f4f4;
             padding: 20px;
             border-radius: 8px;
@@ -112,12 +109,12 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .feature:hover, .benefit:hover, .department:hover {
+        .feature:hover, .benefit:hover, .department:hover, .solution:hover {
             transform: translateY(-5px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .feature img, .benefit img, .department img {
+        .feature img, .benefit img, .department img, .solution img {
             width: 10%;
             border-radius: 8px;
             margin-bottom: 15px;
@@ -176,16 +173,47 @@
                 font-size: 2rem;
             }
 
-            .features, .benefits, .departments {
+            .features, .benefits, .departments, .solutions {
                 grid-template-columns: 1fr;
             }
+        }
+		/* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            width: 50%;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: black;
         }
     </style>
 </head>
 <body>
     <!-- Cabeçalho moderno com logotipo -->
-    <div class="cabecalho-fixo">
-	<header>
+    <header>
         <img src="img/logo-cass-sistemas.png" alt="Logotipo CASS Sistemas">
         <p>Soluções Tecnológicas para Gestão Pública</p>
     </header>
@@ -195,10 +223,9 @@
         <a href="#home">Home</a>
         <a href="#sobre">Sobre Nós</a>
         <a href="#solucao">Solução</a>
+		<a href="#secretarias">Secretarias Atendidas</a>
         <a href="#beneficios">Benefícios</a>
-        <a href="#secretarias">Secretarias Atendidas</a>
     </nav>
-    </div>
 
     <!-- Seção Home -->
     <section align="center" id="home">
@@ -213,51 +240,114 @@
         <p>A CASS Sistemas é uma empresa inovadora focada no desenvolvimento e fornecimento de soluções tecnológicas para a gestão pública.<br/> Nosso compromisso é transformar a relação entre a administração municipal e os cidadãos, oferecendo ferramentas modernas e eficientes que facilitam o acesso aos serviços públicos e aprimoram a eficiência governamental.</p>
     </section>
 
-    <!-- Seção Solução -->
+    <!-- Seção Nossa Solução -->
     <section align="center" id="solucao">
         <h2>Nossa Solução</h2>
-        <p>Nossa plataforma de Gestão Pública Participativa (GPP) é uma solução completa baseada em Software como Serviço (SaaS), projetada para atender às necessidades de virtualização documental, georreferenciamento de imóveis e ruas, cadastro de munícipes e facilitação do acesso aos serviços públicos. <br/> Confira abaixo as principais funcionalidades:</p></p>
-        <div class="features">
-            <div class="feature">
+        <p>Os municípios enfrentam desafios na descentralização dos serviços, exigindo frequentemente a presença física do cidadão em secretarias específicas. O <strong>GPP (Gestão Pública Participativa)</strong> visa transformar essa realidade, permitindo que os cidadãos solicitem e acompanhem diversos serviços diretamente de seus dispositivos móveis.</p>
+        <p>Nossa solução é <strong>modularizada</strong>, o que significa que o município pode escolher os serviços que melhor atendem às suas necessidades. Confira abaixo os módulos disponíveis:</p>
+        <div class="solutions">
+            <div class="solution">
                 <img src="img/pasta-de-arquivo.png" alt="Gestão Eletrônica de Documentos">
                 <h3>Gestão Eletrônica de Documentos</h3>
                 <p>Digitalização e trâmite eletrônico de documentos, despachos e anexos, eliminando a necessidade de papel e agilizando processos.</p>
             </div>
-            <div class="feature">
+            <div class="solution">
                 <img src="img/localizacao.png" alt="Georreferenciamento">
                 <h3>Georreferenciamento</h3>
                 <p>Mapeamento de ruas e imóveis com identificação de riscos e classificação de imóveis (residencial, comercial, educacional, hospitalar, etc.).</p>
             </div>
-            <div class="feature">
+            <div class="solution">
                 <img src="img/identidade-digital.png" alt="Cadastro de Munícipes">
                 <h3>Cadastro de Munícipes</h3>
                 <p>Cadastro completo de munícipes com foto, reconhecimento facial e vinculação a imóveis, garantindo maior controle e segurança.</p>
             </div>
+            <div class="solution">
+                <img src="img/educacao-escolar.png" alt="Instituições de Ensino">
+                <h3>Instituições de Ensino</h3>
+                <p>Cadastro e identificação de salas, com capacidade de alocação de alunos e gestão de matrículas.</p>
+            </div>
+            <div class="solution">
+                <img src="img/predio-comercial.png" alt="Prédios Públicos e Unidades de Saúde">
+                <h3>Prédios Públicos e Unidades de Saúde</h3>
+                <p>Georreferenciamento de prédios públicos e unidades de saúde para melhor gestão de recursos.</p>
+            </div>
+            <div class="solution">
+                <img src="img/sino-de-notificacao.png" alt="Notificações em Tempo Real">
+                <h3>Notificações em Tempo Real</h3>
+                <p>Comunicação direta com os cidadãos sobre serviços e atualizações.</p>
+            </div>
+            <div class="solution">
+                <img src="img/ambulancia.png" alt="Serviços de Emergência">
+                <h3>Serviços de Emergência</h3>
+                <p>Solicitação de ambulâncias com georreferenciamento para atendimento rápido.</p>
+            </div>
+            <div class="solution">
+                <img src="img/matricular.png" alt="Matrículas Escolares">
+                <h3>Matrículas Escolares</h3>
+                <p>Solicitação de matrícula em creches, ensino fundamental e médio.</p>
+            </div>
+            <div class="solution">
+                <img src="img/curso-online.png" alt="Cursos Profissionalizantes">
+                <h3>Cursos Profissionalizantes</h3>
+                <p>Inscrição em cursos profissionalizantes municipais ou de instituições parceiras.</p>
+            </div>
+			<div class="solution">
+                <img src="img/equipe-medica.png" alt="Agendamento de Consultas">
+                <h3>Agendamento de Consultas</h3>
+                <p>Solicitação de consultas médicas e odontológicas de forma simples.</p>
+            </div>
+			<div class="solution">
+                <img src="img/chechup-medico.png" alt="Prontuário Eletrônico">
+                <h3>Prontuário Eletrônico</h3>
+                <p>Acompanhamento de atendimentos na área da saúde.</p>
+            </div>
+			<div class="solution">
+                <img src="img/vacina.png" alt="Receituário Eletrônico">
+                <h3>Receituário Eletrônico</h3>
+                <p>Integração com farmácias públicas e unidades de saúde.</p>
+            </div>
+			<div class="solution">
+                <img src="img/assist-social.png" alt="Assistência Social">
+                <h3>Assistência Social</h3>
+                <p>Solicitação e acompanhamento de serviços da Secretaria de Assistência Social.</p>
+            </div>
+			<div class="solution">
+                <img src="img/servicos.png" alt="Serviços Municipais">
+                <h3>Serviços Municipais</h3>
+                <p>Reparos de pavimentação, iluminação pública e outros, com georreferenciamento e fotos.</p>
+            </div>
+			<div class="solution">
+                <img src="img/pesquisa-online.png" alt="Pesquisas de Satisfação">
+                <h3>Pesquisas de Satisfação</h3>
+                <p>Geração e resposta a pesquisas sobre temas municipais.</p>
+            </div>
+			<div class="solution">
+                <img src="img/sugestao.png" alt="Sugestões dos Cidadãos">
+                <h3>Sugestões dos Cidadãos</h3>
+                <p>Canal para apresentação de sugestões à gestão municipal.</p>
+            </div>
+			<div class="solution">
+                <img src="img/atendimento.png" alt="Atendimento em Tempo Real">
+                <h3>Atendimento em Tempo Real</h3>
+                <p>Chat com os setores para resolução rápida de dúvidas.</p>
+            </div>
+			<div class="solution">
+                <img src="img/comunicacao.png" alt="Chat Entre Setores">
+                <h3>Chat Entre Setores</h3>
+                <p>Chat entre setores para facilitar a comunicação.</p>
+            </div>
+			<div class="solution">
+                <img src="img/dashboard.png" alt="Dashboard de Dados">
+                <h3>Dashboard de Dados</h3>
+                <p>Análise e apresentação de dados estatísticos em tempo real.</p>
+            </div>
+			<div class="solution">
+                <img src="img/dua.png" alt="Documentos de Arrecadação">
+                <h3>Documentos de Arrecadação</h3>
+                <p>Geração e notificação de IPTU e Alvarás.</p>
+            </div>
         </div>
-        <a href="#rodape" class="cta-button">Solicite uma Demonstração</a>
-    </section>
-
-    <!-- Seção Benefícios -->
-    <section align="center" id="beneficios">
-        <h2>Benefícios</h2>
-        <p>Nossa solução traz inúmeros benefícios para os municípios e seus cidadãos:</p>
-        <div class="benefits">
-            <div class="benefit">
-                <img src="img/eficiencia.png" alt="Eficiência Operacional">
-                <h3>Eficiência Operacional</h3>
-                <p>Redução de custos e tempo com processos digitais e automatizados.</p>
-            </div>
-            <div class="benefit">
-                <img src="img/transparencia.png" alt="Transparência">
-                <h3>Transparência</h3>
-                <p>Maior visibilidade dos processos e serviços para os cidadãos.</p>
-            </div>
-            <div class="benefit">
-                <img src="img/dados-seguros.png" alt="Conformidade com a LGPD">
-                <h3>Conformidade com a LGPD</h3>
-                <p>Garantia de segurança e privacidade dos dados dos cidadãos.</p>
-            </div>
-        </div>
+        <a href="#solucao" class="cta-button" onclick="openModal()">Solicite uma Demonstração</a>
     </section>
 
     <!-- Seção Secretarias Atendidas -->
@@ -292,6 +382,29 @@
             </div>
         </div>
     </section>
+	
+	<!-- Seção Benefícios -->
+    <section align="center" id="beneficios">
+        <h2>Benefícios</h2>
+        <p>Nossa solução traz inúmeros benefícios para os municípios e seus cidadãos:</p>
+        <div class="benefits">
+            <div class="benefit">
+                <img src="img/eficiencia.png" alt="Eficiência Operacional">
+                <h3>Eficiência Operacional</h3>
+                <p>Redução de custos e tempo com processos digitais e automatizados.</p>
+            </div>
+            <div class="benefit">
+                <img src="img/transparencia.png" alt="Transparência">
+                <h3>Transparência</h3>
+                <p>Maior visibilidade dos processos e serviços para os cidadãos.</p>
+            </div>
+            <div class="benefit">
+                <img src="img/dados-seguros.png" alt="Conformidade com a LGPD">
+                <h3>Conformidade com a LGPD</h3>
+                <p>Garantia de segurança e privacidade dos dados dos cidadãos.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Rodapé -->
 	<section id="rodape">
@@ -300,5 +413,26 @@
 			<p>Contato: sac@casssistemas.com.br | (79) 98812-0581</p>
 		</footer>
 	</section>
+	
+	<div id="contatoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Solicite uma Demonstração</h2>
+            <p>Entre em contato conosco:</p>
+            <p>Email: sac@casssistemas.com.br</p>
+            <p>Telefone: (79) 98812-0581</p>
+        </div>
+    </div>
+    
+    <script>
+        function openModal() {
+            document.getElementById("contatoModal").style.display = "block";
+        }
+        
+        function closeModal() {
+            document.getElementById("contatoModal").style.display = "none";
+        }
+    </script>
+	
 </body>
 </html>
