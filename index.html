@@ -29,7 +29,7 @@
 
         header img {
             max-width: 600px;
-	    width: 100%;
+			width: 100%;
         }
 
         header h1 {
@@ -289,17 +289,17 @@
                 <h3>Cursos Profissionalizantes</h3>
                 <p>Inscrição em cursos profissionalizantes municipais ou de instituições parceiras.</p>
             </div>
-			<div class="solution">
+			<div class="solution" id="solution-agendamento">
                 <img src="img/equipe-medica.png" alt="Agendamento de Consultas">
                 <h3>Agendamento de Consultas</h3>
                 <p>Solicitação de consultas médicas e odontológicas de forma simples.</p>
             </div>
-			<div class="solution">
+			<div class="solution" id="solution-prontuario">
                 <img src="img/chechup-medico.png" alt="Prontuário Eletrônico">
                 <h3>Prontuário Eletrônico</h3>
                 <p>Acompanhamento de atendimentos na área da saúde.</p>
             </div>
-			<div class="solution">
+			<div class="solution" id="solution-reiceituario">
                 <img src="img/vacina.png" alt="Receituário Eletrônico">
                 <h3>Receituário Eletrônico</h3>
                 <p>Integração com farmácias públicas e unidades de saúde.</p>
@@ -363,7 +363,7 @@
                 <h3>Assistência Social</h3>
                 <p>Facilitação de solicitações e acompanhamento de serviços sociais.</p>
             </div>
-            <div class="department">
+            <div class="department"id="departamento-saude">
 				<img src="img/medico.png" alt="Saúde">
                 <h3>Saúde</h3>
                 <p>Agendamento de consultas, prontuários eletrônicos e receituário digital.</p>
@@ -431,6 +431,26 @@
             document.getElementById("contatoModal").style.display = "none";
         }
     </script>
+	
+	<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const exibirSaude = urlParams.get("v");
+
+        if (exibirSaude === "2") {
+            const saudeElement = document.getElementById("departamento-saude");
+			const agendElement = document.getElementById("solution-agendamento");
+			const prontElement = document.getElementById("solution-prontuario");
+			const reiceElement = document.getElementById("solution-reiceituario");
+            if (saudeElement) {
+                saudeElement.remove();
+				agendElement.remove();
+				prontElement.remove();
+				reiceElement.remove();
+            }
+        }
+    });
+</script>
 	
 </body>
 </html>
