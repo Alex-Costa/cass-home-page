@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>CASS Sistemas - Soluções para Gestão Pública</title>
     <style>
         /* Reset básico */
@@ -287,6 +287,16 @@
                 <h3>Matrículas Escolares</h3>
                 <p>Solicitação de matrícula em creches, ensino fundamental e médio.</p>
             </div>
+			<div class="solution">
+				<img src="img/plano-aula.png" alt="Plano de Aula integrado com BNCC">
+				<h3>Plano de Aula Integrado com BNCC</h3>
+				<p>Ferramenta para planejamento de aulas alinhadas à Base Nacional Comum Curricular (BNCC), facilitando a organização pedagógica.</p>
+			</div>
+			<div class="solution">
+				<img src="img/registro-aula.png" alt="Registro Eletrônico de Aulas e Faltas Escolares">
+				<h3>Registro Eletrônico de Aulas e Faltas Escolares</h3>
+				<p>Plataforma digital para registro de aulas ministradas e controle de frequência dos alunos, otimizando a gestão escolar.</p>
+			</div>
             <div class="solution">
                 <img src="img/curso-online.png" alt="Cursos Profissionalizantes">
                 <h3>Cursos Profissionalizantes</h3>
@@ -303,10 +313,15 @@
                 <p>Acompanhamento de atendimentos na área da saúde.</p>
             </div>
 			<div class="solution" id="solution-reiceituario">
-                <img src="img/vacina.png" alt="Receituário Eletrônico">
+                <img src="img/receita.png" alt="Receituário Eletrônico">
                 <h3>Receituário Eletrônico</h3>
                 <p>Integração com farmácias públicas e unidades de saúde.</p>
             </div>
+			<div class="solution"  id="solution-vacina">
+				<img src="img/vacina.png" alt="Cartão Virtual de Vacinação">
+				<h3>Cartão Virtual de Vacinação</h3>
+				<p>Registro digital das vacinas aplicadas com notificações automáticas para reforços e acompanhamento de histórico.</p>
+			</div>
 			<div class="solution">
                 <img src="img/assist-social.png" alt="Assistência Social">
                 <h3>Assistência Social</h3>
@@ -446,11 +461,13 @@
 			const agendElement = document.getElementById("solution-agendamento");
 			const prontElement = document.getElementById("solution-prontuario");
 			const reiceElement = document.getElementById("solution-reiceituario");
+			const vacinElement = document.getElementById("solution-vacina");
             if (saudeElement) {
                 saudeElement.remove();
 				agendElement.remove();
 				prontElement.remove();
 				reiceElement.remove();
+				vacinElement.remove();
             }
         }
     });
